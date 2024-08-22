@@ -9,10 +9,12 @@ void inicializar_menu() {
     int option;
 
     do {
-        printf("1 - Adicionar cliente na fila\n");
-        printf("2 - Atender cliente\n");
-        printf("3 - Exibir clientes atendidos até o momento\n");
-        printf("4 - Encerrar atendimento\n");
+        printf("---------------Bem vindo!-----------------\n");
+        printf("Qual ação deseja realizar?\n");
+        printf("1 - Adicionar cliente na fila.\n");
+        printf("2 - Atender cliente.\n");
+        printf("3 - Exibir clientes que estão na fila.\n");
+        printf("4 - Encerrar atendimento.\n");
         printf("Escolha uma das opções: ");
         scanf("%d", &option);
 
