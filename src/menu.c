@@ -18,7 +18,7 @@ void inicializar_menu() {
         printf("4 - Encerrar atendimento.\n");
         printf("Escolha uma das opções: ");
         scanf("%d", &option);
-        printf("-------------------------------------------\n")
+        printf("-------------------------------------------\n");
 
         switch (option) {
             case 1:

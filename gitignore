@@ -1,0 +1,32 @@
+# Arquivos e diretórios gerados por compilação
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+build/
+bin/
+obj/
+
+# Arquivos de configuração do editor/IDE
+*.swp
+*.swo
+*.swn
+*.vscode/
+.idea/
+*.project
+*.cproject
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+*.log
+
+# Arquivos e diretórios de ambiente
+.env
+
+# Outras regras
+*.tmp
+*.bak
+*.pyc
