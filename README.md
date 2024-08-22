@@ -1,38 +1,68 @@
 # Controle de fila bancária
 
-O programa simula um sistema de atendimento bancário. Aqui está um guia detalhado sobre como cada parte do programa funciona:
+Este programa foi construído por [Vitória Cabral](github.com/viitoriamoreirac) como forma de obtenção de nota na matéria de **Estrutura de Dados**, lecionada pela professora **Cledja Rolim** e simula um *sistema de atendimento bancário* que controla a fila de clientes e também traz informações sobre quantidade de clientes e tempo de atendimento.
 
-Menu Principal
+#### Os requisitos para avaliação são:
+
+1. Uso da linguagem C;
+2. Uso de listas encadeadas e filas;
+3. Mini tutorial explicando funcionamento;
+4. Justificativa das estruturas utilizadas;
+5. Modularidade de código, documentação, adequação e eficiência;
+
+## Como rodar o projeto? 
+#### Certifique-se de que o script run.sh tenha permissões de execução. Se não tiver, defina com o comando:
+  ```bash
+  chmod +x run.sh
+  ```
+#### Execute o script para compilar e rodar o programa:
+  ```bash
+  ./run.sh
+  ```
+
+## Funcionamento do programa
+
+### Menu Principal
 Quando o programa é iniciado, o menu principal é exibido com as seguintes opções:
 
-1 - Adicionar cliente na fila
-2 - Atender Cliente
-3 - Exibir clientes que estão na fila
-4 - Encerrar atendimento
+1. Adicionar cliente na fila
+2. Atender Cliente
+3. Exibir clientes que estão na fila
+4. Encerrar atendimento
 
-### Adicionar Cliente na Fila
+#### 1 - Adicionar cliente na Fila
+Esta opção chama a função adicionar_cliente() que permite que o usuário adicione um novo cliente à fila. O programa solicitará o nome do cliente e se ele é prioritário (opções 0 ou 1), após isso, é feita a chamada da função escolher_transacoes() que define o tempo necessário para o atendimento com base nas transações escolhidas. Além disso, será calculado o tempo na fila, a partir da soma do tempo total de todos os clientes que já estiverem na fila.
 
-Função: adicionar_cliente()
-Descrição: Permite que o usuário adicione um novo cliente à fila. O programa solicitará o nome do cliente e se ele é prioritário (opções 0 ou 1).
-Nome do Cliente: O nome é solicitado através do terminal e é armazenado no cliente.
-Prioridade: O usuário deve inserir 0 para clientes não prioritários ou 1 para clientes prioritários. Clientes prioritários serão adicionados no início da fila e outros terão a prioridade normal.
-Tempo de Atendimento: Determinado pela função escolher_transacoes(), que define o tempo necessário para o atendimento com base nas transações escolhidas.
-Tempo na Fila: Calculado com base no tempo total de atendimento dos clientes anteriores ou definido como 0 para clientes prioritários.
-Atender Cliente
+#### 2 - Atender Cliente
+Esta opção chama a função atender_cliente() que remove o primeiro cliente da fila e exibe uma mensagem indicando qual cliente está sendo atendido. A função também chama atualizar_relatorio() para registrar o atendimento no relatório, incluindo o incremento no fluxo de clientes e o tempo total de atendimento.
 
-### Função: atender_cliente()
-Descrição: Remove o primeiro cliente da fila e exibe uma mensagem indicando qual cliente está sendo atendido. A função também chama atualizar_relatorio() para registrar o atendimento no relatório, incluindo o incremento no fluxo de clientes e o tempo total de atendimento.
-Exibir Clientes Atendidos
+#### 3 - Exibir Clientes Atendidos
+Esta opção chama a função exibir_fila() que exibe todos os clientes que estão atualmente na fila. Mostra os detalhes de cada cliente, como nome, tempo na fila e se é prioritário.
 
-### Função: exibir_fila()
-Descrição: Exibe todos os clientes que estão atualmente na fila. Mostra os detalhes de cada cliente, como nome, tempo na fila e se é prioritário.
-Encerrar Atendimento
+#### 4 - Encerrar Atendimento
+Esta opção chama a função atender_cliente() em um loop que atende todos os clientes restantes na fila até que ela fique vazia. Após todos os clientes serem atendidos, a função exibir_relatorio() é chamada para mostrar um resumo do atendimento, incluindo o número total de clientes atendidos, tempo total de atendimento, média de tempo de atendimento e quantidade de clientes prioritários.
 
-### Função: Combina atender_cliente() em um loop
-Descrição: Atende todos os clientes restantes na fila até que ela fique vazia. Após todos os clientes serem atendidos, a função exibir_relatorio() é chamada para mostrar um resumo do atendimento, incluindo o número total de clientes atendidos, tempo total de atendimento, e quantidade de clientes prioritários.
+## Estrutura do projeto
 
-
-- organizar readme
-  - explicar uso de estruturas
-  - explicar funcionamento do programa
-  - adicionar seção `como rodar? `
+```bash
+/bank-queue-control
+├── /bin
+│   └── executar         # Executável gerado após a compilação
+├── /include             # Contém os headers para cada função nos arquivos de src
+│   ├── cliente.h
+│   ├── fila.h
+│   ├── menu.h
+│   ├── relatorio.h
+│   └── transacoes.h
+├── /src              
+│   ├── cliente.c
+│   ├── fila.c
+│   ├── main.c
+│   ├── menu.c
+│   ├── relatorio.c
+│   └── transacoes.c
+├── LICENSE              
+├── run.sh               # Script para automatizar a compilação e execução do programa
+├── gitignore
+└── README.md
+```
