@@ -1,4 +1,4 @@
-#include "cliente.h"
+#include "../include/cliente.h"
 
 #include <stdlib.h>
 #include <stdio.h>

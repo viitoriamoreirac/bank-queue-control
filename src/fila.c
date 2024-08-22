@@ -1,9 +1,10 @@
+#include "../include/fila.h"
+#include "../include/transacoes.h"
+#include "../include/relatorio.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "fila.h"
-#include "transacoes.h"
-#include "relatorio.h"
 
 
 Fila* inicializar_fila() {
@@ -146,7 +147,7 @@ Fila* atender_cliente(Fila* fila) {
 
 void exibir_fila(Fila* fila) {
     if (fila->front == NULL) {
-        printf("A fila está vazia.\n");
+        printf("A fila está vazia.\n\n");
         return;
     }
 
@@ -162,4 +163,5 @@ void exibir_fila(Fila* fila) {
                cliente->tempo_total);
         atual = atual->next;
     }
+    printf("----------------------------------------------------");
 }

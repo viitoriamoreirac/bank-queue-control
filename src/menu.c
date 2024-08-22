@@ -1,8 +1,9 @@
+#include "../include/transacoes.h"
+#include "../include/fila.h"
+#include "../include/relatorio.h"
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "transacoes.h"
-#include "fila.h"
-#include "relatorio.h"
 
 void inicializar_menu() {
     Fila* fila = inicializar_fila();
@@ -17,6 +18,7 @@ void inicializar_menu() {
         printf("4 - Encerrar atendimento.\n");
         printf("Escolha uma das opções: ");
         scanf("%d", &option);
+        printf("-------------------------------------------\n")
 
         switch (option) {
             case 1:

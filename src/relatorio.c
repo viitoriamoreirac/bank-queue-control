@@ -1,4 +1,4 @@
-#include "relatorio.h"
+#include "../include/relatorio.h"
 
 #include <stdio.h>
 

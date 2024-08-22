@@ -1,4 +1,5 @@
-#include "transacoes.h"
+#include "../include/transacoes.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
