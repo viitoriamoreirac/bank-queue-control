@@ -20,9 +20,10 @@ void atualizar_relatorio(int tempo_total, int prioritario) {
 
 void exibir_relatorio() {
     printf("--------------------------------------\n");
-    printf("Relatório:\n");
-    printf("Fluxo de Clientes: %d\n", fluxo_de_clientes);
-    printf("Tempo Total de Atendimento: %d\n", tempo_total_de_atendimento);
-    printf("Média de Tempo de Atendimento: %d\n", media_tempo_de_atendimento);
-    printf("Prioridade: %d\n", prioridade);
+    printf("Relatório do dia:\n");
+    printf("Fluxo de Clientes: %d atendidos.\n", fluxo_de_clientes);
+    printf("Tempo Total de Atendimento: %d segundos.\n", tempo_total_de_atendimento);
+    printf("Média de Tempo de Atendimento: %d segundos.\n", media_tempo_de_atendimento);
+    printf("Prioridade: %d clientes atendidos.\n", prioridade);
+    printf("---------------------------------------\n");
 }
