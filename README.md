@@ -1,6 +1,6 @@
 # Controle de fila bancária
 
-Este programa foi construído por [Vitória Cabral](github.com/viitoriamoreirac) como forma de obtenção de nota na matéria de **Estrutura de Dados**, lecionada pela professora **Cledja Rolim** e simula um *sistema de atendimento bancário* que controla a fila de clientes e também traz informações sobre quantidade de clientes e tempo de atendimento.
+Este programa foi construído por [Vitória Cabral](github.com/viitoriamoreirac) e [Emesson Michael](github.com/EmessonG) como forma de obtenção de nota na matéria de **Estrutura de Dados**, lecionada pela professora **Cledja Rolim** e simula um *sistema de atendimento bancário* que controla a fila de clientes e também traz informações sobre quantidade de clientes e tempo de atendimento.
 
 #### Os requisitos para avaliação são:
 
