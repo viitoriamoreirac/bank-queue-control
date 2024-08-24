@@ -2,6 +2,20 @@
 
 Este programa foi construído por [Vitória Cabral](github.com/viitoriamoreirac) e [Emesson Michael](github.com/EmessonG) como forma de obtenção de nota na matéria de **Estrutura de Dados**, lecionada pela professora **Cledja Rolim** e simula um *sistema de atendimento bancário* que controla a fila de clientes e também traz informações sobre quantidade de clientes e tempo de atendimento.
 
+#### Situação problema:
+
+Além de fazer o gerenciamento da fila, o sistema deve exibir o tempo que o cliente permaneceu na fila. Quando o cliente entra na fila o tempo é registrado para ser adicionado no tempo final que ele ficou. O cliente pode fazer uma ou várias das transações abaixo:
+
+>| Código | Transação     | Duração |
+>|--------|---------------|---------|
+>| 1      | Saque         | 50s     |
+>| 2      | Depósito      | 70s     |
+>| 3      | Pagamento     | 100s    |
+>| 4      | Transferência | 60s     |
+
+No final do expediente, há um relatório que a gerência analisa sobre o atendimento, como quantidade
+de clientes, tempo total, tempo de cada cliente, atendimento por prioridade, etc.
+
 #### Os requisitos para avaliação são:
 
 1. Uso da linguagem C;
