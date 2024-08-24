@@ -66,3 +66,33 @@ Esta opção chama a função atender_cliente() em um loop que atende todos os c
 ├── gitignore
 └── README.md
 ```
+
+### Estruturas utilizadas
+
+1. Cliente: estrutura para armazenar nome, situação de prioridade e informações sobre o tempo de atendimento de cada cliente que passa pela fila, permitindo fácil gerenciamento e manipulação desses dados.
+
+   ```c
+   typedef struct cliente {
+    char nome[50];
+    int tempo_na_fila;
+    int tempo_de_atendimento;
+    int tempo_total;
+    int prioritario;
+    } Cliente;
+   
+2. Node: estrutura que armazena  um ponteiro para um cliente `Cliente* cliente` e um ponteiro para o próximo nó `struct node* next` facilitando a implementação da fila como lista encadeada.
+   
+   ```c
+   
+   typedef struct node {
+    Cliente* cliente;
+    struct node* next;
+   } Node;
+   
+3. Fila: estrutura que representa e gerencia a fila, com dois ponteiros: `front` para o início da fila e `rear` para o fim da fila, facilitando a adição e remoção dos clientes.
+   
+   ```c
+   typedef struct fila {
+    Node* front;
+    Node* rear;
+   } Fila;
